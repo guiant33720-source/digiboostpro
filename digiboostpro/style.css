@@ -1,0 +1,451 @@
+/**
+ * Styles principaux DigiboostPro
+ */
+
+/* Variables CSS */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --transition: all 0.3s ease;
+}
+
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.animate-slide-in {
+    animation: slideIn 1s ease-out;
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section img {
+    transition: var(--transition);
+}
+
+.hero-section img:hover {
+    transform: scale(1.05);
+}
+
+/* Statistiques */
+.stats-section {
+    position: relative;
+}
+
+.stat-card {
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+}
+
+.counter {
+    transition: var(--transition);
+}
+
+/* Cards */
+.service-card,
+.pack-card,
+.option-card,
+.article-card,
+.testimonial-card,
+.news-card {
+    transition: var(--transition);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.service-card:hover,
+.pack-card:hover,
+.option-card:hover,
+.article-card:hover,
+.testimonial-card:hover,
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+}
+
+.service-icon {
+    transition: var(--transition);
+}
+
+.service-card:hover .service-icon i {
+    animation: pulse 1s infinite;
+}
+
+/* Prix */
+.price-tag {
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0,123,255,0.1);
+}
+
+/* Boutons */
+.btn {
+    transition: var(--transition);
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Page de connexion */
+.login-page {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.login-page .card {
+    border-radius: 15px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+footer a:hover {
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.social-links a {
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+/* Tables */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead {
+    font-weight: 600;
+}
+
+/* Formulaires */
+.form-control,
+.form-select {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: var(--transition);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+.input-group-text {
+    background-color: var(--light-color);
+    border: 1px solid #ddd;
+}
+
+/* Badges */
+.badge {
+    font-weight: 500;
+    padding: 0.5em 0.8em;
+}
+
+/* Alertes */
+.alert {
+    border-radius: 10px;
+    border: none;
+}
+
+/* Page headers */
+.page-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 400px;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    .stat-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+/* Chargement */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Dashboard Styles */
+.dashboard-card {
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1) !important;
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+/* Charts */
+.chart-container {
+    position: relative;
+    height: 300px;
+    margin: 20px 0;
+}
+
+/* Sidebar */
+.sidebar {
+    min-height: 100vh;
+    background: var(--dark-color);
+    transition: var(--transition);
+}
+
+.sidebar .nav-link {
+    color: rgba(255,255,255,0.8);
+    padding: 12px 20px;
+    transition: var(--transition);
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+    width: 20px;
+text-align: center;
+}/* Content wrapper */
+.content-wrapper {
+margin-left: 0;
+transition: var(--transition);
+}@media (min-width: 768px) {
+.content-wrapper {
+margin-left: 250px;
+}
+}/* User menu */
+.user-menu {
+padding: 20px;
+border-bottom: 1px solid rgba(255,255,255,0.1);
+}.user-avatar {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background: var(--primary-color);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.5rem;
+color: white;
+font-weight: bold;
+}/* Notifications */
+.notification-badge {
+position: absolute;
+top: -5px;
+right: -5px;
+background: var(--danger-color);
+color: white;
+border-radius: 50%;
+width: 20px;
+height: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 0.7rem;
+}/* Status badges */
+.status-badge {
+padding: 5px 10px;
+border-radius: 20px;
+font-size: 0.85rem;
+font-weight: 500;
+}/* Action buttons */
+.action-btn {
+padding: 5px 10px;
+font-size: 0.85rem;
+margin: 0 2px;
+}/* Modal customization */
+.modal-content {
+border-radius: 15px;
+border: none;
+}.modal-header {
+border-bottom: 1px solid #f0f0f0;
+padding: 20px;
+}.modal-body {
+padding: 25px;
+}/* Pagination */
+.pagination {
+margin-top: 20px;
+}.page-link {
+color: var(--primary-color);
+transition: var(--transition);
+}.page-link:hover {
+background-color: var(--primary-color);
+color: white;
+}/* Progress bars */
+.progress {
+height: 25px;
+border-radius: 10px;
+overflow: hidden;
+}.progress-bar {
+transition: width 0.6s ease;
+}/* Breadcrumb */
+.breadcrumb {
+background: transparent;
+padding: 0;
+margin-bottom: 20px;
+}/* DataTables customization */
+.dataTables_wrapper {
+padding: 20px 0;
+}.dataTables_filter input {
+margin-left: 10px;
+border-radius: 5px;
+}/* Print styles */
+@media print {
+.sidebar,
+.navbar,
+footer,
+.no-print {
+display: none !important;
+}
+.content-wrapper {
+    margin-left: 0 !important;
+}
