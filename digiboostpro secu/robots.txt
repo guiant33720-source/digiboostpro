@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /conseiller/
+Disallow: /client/
+Disallow: /ajax/
+Disallow: /config.php
